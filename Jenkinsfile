@@ -62,7 +62,7 @@ node {
         echo 'pushing docker image'
         withCredentials([string(credentialsId: 'dockerpass', variable: 'dockerpassword')]) {
         sh "${dockerCMD} login -u rahul9711 -p ${dockerpassword}"
-        sh "${dockerCMD} push niladrimondaldcr/medicure:${tagName}"
+        sh "${dockerCMD} push rahul9711/medicure:${tagName}"
         }
     }
     stage('deploy the application'){
