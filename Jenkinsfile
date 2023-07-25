@@ -16,7 +16,7 @@ node {
     stage ('code checkout'){
         try{
         echo 'pulling the code from github repo'
-        git 'https://github.com/niladrimondal/star-agile-health-care.git'
+        git 'https://github.com/rahulk8/star-agile-health-care.git'
         }
         catch(Exception e){
             echo 'Exception Occur'
@@ -44,7 +44,7 @@ node {
         //restart Jenkins
         //or add sudoers file below line
         //jenkins ALL=(ALL) NOPASSWD:ALL
-        sh "${dockerCMD} build -t niladrimondaldcr/medicure:${tagName} ."
+        sh "${dockerCMD} build -t rahul9711/medicure:${tagName} ."
         
         }
         catch(Exception e){
