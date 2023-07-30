@@ -24,7 +24,7 @@
       group: ubuntu
       mode: u=rw,g=r,o=r
    
-  - name : Creating pods in minikube
+  - name : Creating pods in kubernetes
     command : kubectl create -f /home/ubuntu/medicurelb.yml
     become : yes
     become_user : ubuntu
