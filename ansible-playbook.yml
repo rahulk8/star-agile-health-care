@@ -25,11 +25,11 @@
       mode: u=rw,g=r,o=r
 
   - name : delete already running pods in minikube
-    command : kubectl delete -- -f /home/ubuntu/medicurelb.yml
+    command : kubectl delete -f /home/ubuntu/medicurelb.yml
     become : yes
     become_user : ubuntu
    
   - name : Creating pods in minikube
-    command : kubectl create -- -f /home/ubuntu/medicurelb.yml
+    command : kubectl create -f /home/ubuntu/medicurelb.yml
     become : yes
     become_user : ubuntu
