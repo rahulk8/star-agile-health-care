@@ -70,3 +70,4 @@ public class MediCureTestNgReport throws InterruptedException, IOException {
 		driver.quit();
 	}
 }
+}
