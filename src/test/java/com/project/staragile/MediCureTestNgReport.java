@@ -20,7 +20,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class MediCureTestNgReport  {
   
           @Test
-	  public  void testapp() {
+	  public  void testapp() throws Exception {
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
@@ -58,8 +58,7 @@ public class MediCureTestNgReport  {
 		
 	        TakesScreenshot scrShot = ((TakesScreenshot)driver);
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
-		//File destFile = new File ("//home/ubuntu//scr.png");
-		  File destFile = new File ("//home/ubuntu//");
+		File destFile = new File ("//home/ubuntu//scr.png");
 		FileUtils.copyFile(screenShot, destFile); 
 		  
 		try {
