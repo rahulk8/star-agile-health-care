@@ -56,10 +56,10 @@ public class MediCureTestNgReport  {
 			System.out.println("Script Failed");
 		}
 		
-		TakesScreenshot scrShot = ((TakesScreenshot)driver);
+		/* TakesScreenshot scrShot = ((TakesScreenshot)driver);
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
 		File destFile = new File ("//home/ubuntu//scr.png");
-		FileUtils.copyFile(screenShot, destFile);
+		FileUtils.copyFile(screenShot, destFile); */
 		  
 		try {
 			Thread.sleep(5000);
