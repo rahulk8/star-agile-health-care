@@ -17,7 +17,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class MediCureTestNgReport{
+public class MediCureTestNgReport throws InterruptedException, IOException {
   
           @Test
 	  public  void testapp() {
