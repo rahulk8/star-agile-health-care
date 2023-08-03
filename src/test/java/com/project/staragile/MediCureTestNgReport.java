@@ -20,7 +20,7 @@ public class MediCureTestNgReport{
 		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--no-sandbox");
 		chromeOptions.addArguments("--disable-dev-shm-usage");
-		   driver.get("http://13.232.228.60:8082/contac.html");
+		   driver.get("http://13.232.228.60:8082/contact.html");
 		  
 		   //driver.findElement(By.name("q")).sendKeys("kia",Keys.ENTER);
 		   //System.out.println(driver.getTitle());
