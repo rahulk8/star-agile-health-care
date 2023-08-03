@@ -15,24 +15,20 @@ public class MediCureTestNgReport{
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
-		   driver.get("http://13.232.228.60:8082/");
+		   driver.get("http://13.232.228.60:8082/contac.html");
 		   //driver.findElement(By.name("q")).sendKeys("kia",Keys.ENTER);
 		   //System.out.println(driver.getTitle());
 
 		  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		WebElement name= driver.findElement(By.xpath("//input[@placeholder='Your Name']"));
-		name.sendKeys("Rahul Kumar");
+		driver.findElement(By.xpath("//input[@placeholder='Your Name']")).sendKeys("Rahul Kumar");
+	
+		driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("9711739492");
+	
 		
-		
-		WebElement phone= driver.findElement(By.xpath("//input[@placeholder='Phone Number']"));
-		phone.sendKeys("9711739492");
-		
-		WebElement email= driver.findElement(By.xpath("//input[@placeholder='Email']"));
-		email.sendKeys("rahulpatna89@gmail.com");
-		
-		WebElement messagebox= driver.findElement(By.xpath("//input[@placeholder='Message']"));
-		messagebox.sendKeys("Hi Medicure , Please call me back for medical consultation");
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("rahulpatna89@gmail.com");
+
+	        driver.findElement(By.xpath("//input[@placeholder='Message']")).sendKeys("Hi Medicure , Please call me back for medical consultation");
 		
 		driver.findElement(By.className("btn_box")).click();
 		
