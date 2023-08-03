@@ -1,4 +1,4 @@
-package com.medicureapp;
+package com.project.staragile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
