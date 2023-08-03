@@ -7,11 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class MediCureTest {
+public class MediCureTestNgReport{
   
-    @Test
+          @Test
 	  public  void testapp() {
-       WebDriverManager.chromedriver().setup();
+                  WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
 		   driver.get("http://13.232.228.60:8082/");
