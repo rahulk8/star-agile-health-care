@@ -8,16 +8,13 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.File;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class MediCureTestNgReport{
@@ -27,6 +24,7 @@ public class MediCureTestNgReport{
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
+		  System.setProperty("webdriver.chrome.driver","//home//ubuntu//chromedriver-linux64//chromedriver");
 
 		  ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
