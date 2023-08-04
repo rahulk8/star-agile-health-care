@@ -32,7 +32,7 @@ public class MediCureTestNgReport  {
 		chromeOptions.addArguments("--disable-dev-shm-usage");
 		   driver.get("http://13.232.228.60:8082/contact.html");
 		  
-		   ///driver.findElement(By.name("q")).sendKeys("Niki",Keys.ENTER);
+		   ////driver.findElement(By.name("q")).sendKeys("Niki",Keys.ENTER);
 		   //System.out.println(driver.getTitle());
 
 		  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
