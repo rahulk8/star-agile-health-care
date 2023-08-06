@@ -24,13 +24,13 @@ public class MediCureTestNgReport  {
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
-		   System.setProperty("webdriver.chrome.driver","//home//ubuntu//chromedriver-linux64//chromedriver");
+		   
 
 		  
 		   driver.get("http://13.232.228.60:8082/contact.html");
 		  
-		   ////driver.findElement(By.name("q")).sendKeys("Niki",Keys.ENTER);
-		   //System.out.println(driver.getTitle());
+		   //driver.findElement(By.name("q")).sendKeys("Rahul",Keys.ENTER);
+		   System.out.println(driver.getTitle());
 
 		  	  
 		try {
