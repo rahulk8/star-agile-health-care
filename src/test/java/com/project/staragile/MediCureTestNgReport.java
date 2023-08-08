@@ -24,7 +24,7 @@ public class MediCureTestNgReport  {
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
-		   System.setProperty("webdriver.chrome.driver","//home//ubuntu//chromedriver-linux64//chromedriver");
+		   //System.setProperty("webdriver.chrome.driver","//home//ubuntu//chromedriver-linux64//chromedriver");
 
 		  ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--headless");
