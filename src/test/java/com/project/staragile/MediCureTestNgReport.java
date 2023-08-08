@@ -24,15 +24,45 @@ public class MediCureTestNgReport  {
                   WebDriverManager.chromedriver().setup();
 		   WebDriver driver = new ChromeDriver();
 		   driver.manage().window().maximize();
-		   
+		   System.setProperty("webdriver.chrome.driver","//home//ubuntu//chromedriver-linux64//chromedriver");
 
-		  
+		  ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("--disable-dev-shm-usage");
 		   driver.get("http://13.232.228.60:8082/contact.html");
 		  
-		   //driver.findElement(By.name("q")).sendKeys("Rahul",Keys.ENTER);
-		   System.out.println(driver.getTitle());
+		   ////driver.findElement(By.name("q")).sendKeys("Niki",Keys.ENTER);
+		   //System.out.println(driver.getTitle());
 
-		  	  
+		  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
+		driver.findElement(By.xpath("//input[@placeholder='Your Name']")).sendKeys("Rahul Kumar");
+	
+		driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("9711739492");
+	
+		
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("rahulpatna89@gmail.com");
+
+	        driver.findElement(By.xpath("//input[@placeholder='Message']")).sendKeys("Hi Medicure , Please call me back for medical consultation");
+		
+		driver.findElement(By.className("btn_box")).click();
+		
+		String message = driver.findElement(By.id("message")).getText();
+		if(message.equals("Email sent.")) {
+			System.out.println("Script Executed Successfully");
+		} else 
+		{
+			System.out.println("Script Failed");
+		}
+		
+	        TakesScreenshot scrShot = ((TakesScreenshot)driver);
+		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
+		//File destFile = new File ("//home/ubuntu//scr.png");
+		File destFile = new File ("//var/lib/jenkins//scr.png");
+		///File destFile = new File ("./scr.png");
+		FileUtils.copyFile(screenShot, destFile); 
+		  
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
