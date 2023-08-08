@@ -17,7 +17,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class MediCureTestNgReport  {
+public class MediCureTestNgScreenshot {
   
           @Test
 	  public  void testapp() throws Exception {
