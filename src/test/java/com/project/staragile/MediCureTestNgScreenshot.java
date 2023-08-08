@@ -1,4 +1,4 @@
-package com.project.staragile;
+/* package com.project.staragile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -70,7 +70,7 @@ public class MediCureTestNgScreenshot {
 		        ///File destFile = new File ("./scr.png");
 		        FileUtils.copyFile(screenShot, destFile);  */
 		  
-		try {
+		/* try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -78,5 +78,5 @@ public class MediCureTestNgScreenshot {
 		}
 		driver.quit();
 	}
-}
+} */
 
