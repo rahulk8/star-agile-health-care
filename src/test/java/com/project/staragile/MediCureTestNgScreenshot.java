@@ -50,18 +50,25 @@ public class MediCureTestNgScreenshot {
 		
 		String message = driver.findElement(By.id("message")).getText();
 		if(message.equals("Email sent.")) {
-			System.out.println("Script Executed Successfully");
+			//System.out.println("Script Executed Successfully");
+			TakesScreenshot scrShot = ((TakesScreenshot)driver);
+		        File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
+		        File destFile = new File ("//home/ubuntu//scr.png");
+		        //File destFile = new File ("//var/lib/jenkins//scr.png");
+		         FileUtils.copyFile(screenShot, destFile); 
+			System.out.println("Screenshot taken Successfully");
 		} else 
 		{
-			System.out.println("Script Failed");
+			//System.out.println("Script Failed");
+			System.out.println("Taking Screenshot gets failed");
 		}
 		
-	        TakesScreenshot scrShot = ((TakesScreenshot)driver);
-		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
-		File destFile = new File ("//home/ubuntu//scr.png");
-		//File destFile = new File ("//var/lib/jenkins//scr.png");
-		///File destFile = new File ("./scr.png");
-		FileUtils.copyFile(screenShot, destFile); 
+	              /* TakesScreenshot scrShot = ((TakesScreenshot)driver);
+		        File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
+		        File destFile = new File ("//home/ubuntu//scr.png");
+		        //File destFile = new File ("//var/lib/jenkins//scr.png");
+		        ///File destFile = new File ("./scr.png");
+		        FileUtils.copyFile(screenShot, destFile);  */
 		  
 		try {
 			Thread.sleep(5000);
